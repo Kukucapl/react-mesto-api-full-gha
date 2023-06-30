@@ -1,0 +1,15 @@
+.form {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 430px;
+  min-height: 183px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+}
+
+@media screen and (max-width: 468px) {
+  .form {
+    width: calc(430px - (468px - 100vw));
+  }
+}

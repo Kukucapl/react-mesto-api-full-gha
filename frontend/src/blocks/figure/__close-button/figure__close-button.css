@@ -1,0 +1,46 @@
+.figure__close-button {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 32px;
+  height: 32px;
+  background: url(../../../images/Close.svg) center no-repeat;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  object-fit: contain;
+}
+
+.figure__close-button:hover {
+  opacity: 60%;
+}
+
+@media screen and (max-width: 548px) {
+  .figure__close-button {
+    right: calc(-40px + (548px - 100vw));
+  }
+}
+
+@media screen and (max-width: 508px) {
+  .figure__close-button {
+    right: 0px;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .figure__close-button {
+    width: calc(32px - (468px - 100vw));
+    height: calc(32px - (468px - 100vw));
+    background-size: calc(32px - (468px - 100vw));
+    top: calc(-40px + ((468px - 100vw) / 2));
+  }
+}
+
+@media screen and (max-width: 456px) {
+  .figure__close-button {
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+    top: -36px;
+  }
+}

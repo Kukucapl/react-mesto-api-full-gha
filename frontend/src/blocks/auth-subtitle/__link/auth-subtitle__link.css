@@ -1,0 +1,9 @@
+.auth-subtitle__link {
+  text-decoration: none;
+  color: #FFFFFF;
+  transition: opacity 0.3s;
+}
+
+.auth-subtitle__link:hover {
+    opacity: 60%;
+  }

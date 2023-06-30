@@ -1,0 +1,16 @@
+.form__input-error {
+  position: relative;
+  width: 358px;
+  font-size: 12px;
+  line-height: 15px;
+  display: none;
+  color: red;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 454px) {
+  .form__input-error {
+    min-width: 238px;
+    width: calc(358px - (454px - 100vw));
+  }
+}

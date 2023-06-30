@@ -1,0 +1,46 @@
+.form__close-button {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  background: url(../../../images/Close.svg) center no-repeat;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  object-fit: contain;  
+}
+
+.form__close-button:hover {
+  opacity: 60%;
+}
+
+@media screen and (max-width: 548px) {
+  .form__close-button {
+    right: calc(-40px + (548px - 100vw));
+  }
+}
+
+@media screen and (max-width: 508px) {
+  .form__close-button {
+    right: 0px;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .form__close-button {
+    width: calc(32px - (468px - 100vw));
+    height: calc(32px - (468px - 100vw));
+    background-size: calc(32px - (468px - 100vw));
+    top: calc(-40px + ((468px - 100vw) / 2));
+  }
+}
+
+@media screen and (max-width: 456px) {
+  .form__close-button {
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+    top: -36px;
+  }
+}

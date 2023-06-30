@@ -1,0 +1,35 @@
+.form__save-button {
+  width: 358px;
+  min-height: 50px;
+  font-size: 18px;
+  line-height: 22px;
+  background-color: black;
+  border: none;
+  border-radius: 2px;
+  color: #FFFFFF;
+  margin: 48px auto 37px;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.form__save-button:hover {
+  opacity: 80%;
+}
+
+@media screen and (max-width: 454px) {
+  .form__save-button {
+    min-width: 238px;
+    min-height: 46px;
+    width: calc(358px - (454px - 100vw));
+    margin: 45px auto calc(37px - ((454px - 100vw) / 12));
+    font-size: calc(18px - ((454px - 100vw) / 30));
+  }
+}
+@media screen and (max-width: 334px) {
+  .form__save-button {
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}  

@@ -1,0 +1,37 @@
+.auth__save-button {
+  width: 358px;
+  min-height: 50px;
+  font-size: 18px;
+  line-height: 22px;
+  background-color: #FFFFFF;
+  border: none;
+  border-radius: 2px;
+  color: black;
+  margin: 48px auto 15px;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  position: absolute;
+  bottom: 0;
+}
+
+.auth__save-button:hover {
+  opacity: 80%;
+}
+
+@media screen and (max-width: 454px) {
+  .auth__save-button {
+    min-width: 238px;
+    min-height: 46px;
+    width: calc(358px - (454px - 100vw));
+    margin: 45px auto calc(37px - ((454px - 100vw) / 12));
+    font-size: calc(18px - ((454px - 100vw) / 30));
+  }
+}
+@media screen and (max-width: 334px) {
+  .auth__save-button {
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}  

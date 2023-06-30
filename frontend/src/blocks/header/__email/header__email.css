@@ -1,0 +1,26 @@
+.header__email {
+  max-width: 45vw;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+  margin: 0;
+  padding-right: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 454px) {
+  .header__email {
+    max-width: 50vw;
+    font-size: calc(18px - ((454px - 100vw) / 30));
+    align-self: flex-end;
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 334px) {
+  .header__email {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}  

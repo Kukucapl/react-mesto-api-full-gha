@@ -1,0 +1,28 @@
+.form__title {
+  width: 358px;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 900;
+  margin: 34px auto 18px;
+}
+
+@media screen and (max-width: 454px) {
+  .form__title {
+    min-width: 238px;
+    width: calc(358px - (454px - 100vw));
+    font-size: calc(24px - ((454px - 100vw) / 20));
+    line-height: 21.78px;
+    margin-top: calc(34px - ((454px - 100vw) / 13));
+    margin-bottom: calc(24px + ((454px - 100vw) / 5.7));
+  }
+}
+
+@media screen and (max-width: 334px) {
+  .form__title {
+    font-size: 18px;
+    line-height: 21.78px;
+    margin: 25px auto 45px;
+    margin-top: 24px;
+    margin-bottom: 45px;
+  }
+}
