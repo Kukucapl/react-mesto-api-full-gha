@@ -11,7 +11,7 @@ const NotFound = require('./data/notfound');
 const {
   createUserValidator, loginValidator,
 } = require('./validators/validators');
-const cors = require('./middlewares/cors');
+const { cors } = require('./middlewares/cors');
 
 const { PORT = 3000, DB_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;
 const app = express();
