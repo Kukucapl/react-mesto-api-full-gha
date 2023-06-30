@@ -69,6 +69,10 @@ export default function App() {
   }
 
   React.useEffect (() => {
+    checkToken()
+  }, []);
+
+  React.useEffect (() => {
     if (loggedIn) {
       api.getUserInfo()
       .then((res) => {
@@ -77,12 +81,17 @@ export default function App() {
       .catch((err) => {
         console.log(err)
       });
+      api.getAllCards()
+      .then((res) => {
+        setCards(res)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
     }
   }, [loggedIn]);
 
-  React.useEffect (() => {
-    checkToken()
-  }, []);
+
 
   function handleUpdateUser(userInfo) {
     api.setUserInfo(userInfo.name, userInfo.about)
@@ -105,18 +114,6 @@ export default function App() {
       console.log(err)
     });
   }
-
-  React.useEffect (() => {
-    if (loggedIn) {
-      api.getAllCards()
-      .then((res) => {
-        setCards(res)
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-    }
-  }, [loggedIn]);
 
   function handleCardLike(card) {
     const isLiked = card.likes.some(i => i === currentUser._id);
