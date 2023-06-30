@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const { errors } = require('celebrate');
 const { errorHandler } = require('./middlewares/error-handler');
+const { requestLogger, errorLogger } = require('./middlewares/logger');
 const userRouter = require('./routes/users');
 const cardRouter = require('./routes/cards');
 const { createUser, login } = require('./controllers/users');
@@ -22,7 +23,7 @@ mongoose.connect(DB_URL)
   .catch((err) => console.log(err));
 
 app.use(bodyParser.json());
-
+app.use(requestLogger);
 app.post('/signin', loginValidator, login);
 app.post('/signup', createUserValidator, createUser);
 
@@ -31,6 +32,7 @@ app.use(auth);
 app.use('/', userRouter);
 app.use('/', cardRouter);
 app.use('*', (req, res, next) => { next(new NotFound('Адресс не существует')); });
+app.use(errorLogger);
 app.use(errors());
 app.use(errorHandler);
 app.listen(PORT);
