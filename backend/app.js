@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const { errors } = require('celebrate');
+const cors = require('cors');
 const { errorHandler } = require('./middlewares/error-handler');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const userRouter = require('./routes/users');
@@ -13,8 +14,7 @@ const NotFound = require('./data/notfound');
 const {
   createUserValidator, loginValidator,
 } = require('./validators/validators');
-//const { cors } = require('./middlewares/cors');
-const cors = require('cors');
+// const { cors } = require('./middlewares/cors');
 
 const { PORT = 3000, DB_URL = 'mongodb://127.0.0.1:27017/mestodb' } = process.env;
 const app = express();
