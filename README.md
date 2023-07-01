@@ -9,8 +9,8 @@
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 158.160.29.38
 
-Frontend https://...
+Frontend https://mesto.kukucapl.nomoreparties.sbs
 
-Backend https://...
+Backend https://api.mesto.kukucapl.nomoreparties.sbs
