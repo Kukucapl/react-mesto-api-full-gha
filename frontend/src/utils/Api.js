@@ -89,7 +89,7 @@ class Api {
 
 
 export const api = new Api({
-  url: 'http://api.mesto.kukucapl.nomoreparties.sbs',
+  url: 'https://api.mesto.kukucapl.nomoreparties.sbs',
   headers: {
     'Accept': 'application/json',
     "Content-Type": "application/json",
