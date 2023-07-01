@@ -1,5 +1,3 @@
-import { CurrentUserContext } from "../contexts/CurrentUserContext";
-
 class Api {
   constructor(config) {
     this._url = config.url; 
@@ -9,7 +7,7 @@ class Api {
     const token = localStorage.getItem('token');
     return {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${localStorage.getItem('token')}`,
+      'Authorization': `Bearer ${localStorage.getItem(token)}`,
       ...this._headers,
     }
   }
