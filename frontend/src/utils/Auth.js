@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://mesto.kukucapl.nomoreparties.sbs';
+export const BASE_URL = 'http://api.mesto.kukucapl.nomoreparties.sbs';
 
 function getResponseData(res) {
   if (!res.ok) {
