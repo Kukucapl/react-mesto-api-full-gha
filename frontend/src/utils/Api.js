@@ -7,7 +7,7 @@ class Api {
     const token = localStorage.getItem('token');
     return {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${localStorage.getItem(token)}`,
+      'Authorization': `Bearer ${token}`,
       ...this._headers,
     }
   }
