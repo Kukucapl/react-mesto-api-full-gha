@@ -89,7 +89,7 @@ class Api {
 
 
 export const api = new Api({
-  url: 'https://api.mesto.kukucapl.nomoreparties.sbs',
+  url: 'http://localhost:3001',
   headers: {
     'Accept': 'application/json',
     "Content-Type": "application/json",

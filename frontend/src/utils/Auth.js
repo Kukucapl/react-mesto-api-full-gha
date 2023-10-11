@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://api.mesto.kukucapl.nomoreparties.sbs';
+export const BASE_URL = 'http://localhost:3001';
 
 function getResponseData(res) {
   if (!res.ok) {

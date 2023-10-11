@@ -1,7 +1,7 @@
 const allowedCors = [
-  'https://mesto.kukucapl.nomoreparties.sbs',
-  'http://mesto.kukucapl.nomoreparties.sbs',
-  'http//:localhost:3000',
+  'https://diplom.kukucapl.nomoredomains.work',
+  'http://diplom.kukucapl.nomoredomains.work',
+  'http://localhost:3000',
 ];
 const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
 
